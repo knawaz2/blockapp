@@ -1,0 +1,41 @@
+.numberview {
+  float: left;
+  margin-top: 5px;
+  width: 60px;
+  background-color: #777777;
+}
+
+.stringview {
+  float: right;
+  margin-top: 5px;
+  width: 50px;
+  background-color: #cccccc;
+}
+
+.main{
+	margin: 20px;
+	width: 500px;
+  float: right;
+  
+}
+.main-new{
+ margin: 20px;
+ width: 400px;
+ background-color: #777;
+ min-height: 700px; 
+}
+
+.display-class{
+	display: block;
+
+}
+.not-display-class{
+	display: none;
+}
+
+.top-button{
+
+	margin: 35px;
+	width: 150px;
+	height: 25px;
+}

@@ -1,0 +1,35 @@
+Total values are {{blocks.length}}
+
+    <button class="top-button" (click)="showAllBlocks(blocks)"><label> Reset Button </label> </button>
+    <button class="top-button" (click)="removeAllBlocks()"><label> Remove All Values </label> </button>
+
+<div class="blockapp">
+ <h1>
+   Add Letters and Numbers to connect
+</h1>
+<div class="main-new">
+    
+   <label> Letters {{blockVal}}</label> <div> <input [ngModel]="blockVal" (ngModelChange)="blockVal=$event" type="text" name="txtletter" id="txtletter" />  </div>
+     <label> Connected Numbers</label> <div> <input [ngModel]="relatedVals" (ngModelChange)="relatedVals=$event" type="text" name="txtnumber" id="txtnumber" />  </div>
+    <div> <button type="submit" class="top-button" name="add" id="add" (click)="addBlockusingForm()"  > <label> Add </label> </button></div>
+ 
+</div>
+
+  <div class="main" *ngIf="blocks.length > 0">
+    <div class="block-list">
+      <div *ngFor="let block of blocks" >
+      
+        <button class="numberview {{block.display}}" *ngIf="block.blocktype == 'number'" (click)="toggleRelatedBlocks(block)" >
+          <label>{{block.blockval}} </label>
+        </button>
+
+        <button class="stringview {{block.display}}" *ngIf="block.blocktype == 'char'" (click)="toggleRelatedBlocks(block)"  >
+          <label>{{block.blockval}} </label>
+        </button>
+
+      </div>
+    </div>
+  </div>
+  
+
+</div>
